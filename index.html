@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's play Clash app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen items-center justify-center bg-gradient-to-r from-orange-200 to-lime-200 p-10">
+        <!-- Start game -->
+        <div class="size-72 bg-slate-400 m-auto self-center flex flex-col items-center justify-center gap-2 rounded-lg">
+            <h1>Welcome to PlayClash Game!</h1>
+            <button class="btn btn-primary p-2" id="start-btn">Start!</button>
+        </div>
+        <!-- Playground -->
+        <div class="h-auto glass m-0 self-center flex flex-col items-center justify-center gap-2 hidden" id="playground">
+            <h1></h1>Playground
+            <div class="flex size-48 bg-slate-300 border-2 border-gray-200 justify-center items-center" id="display">
+                <h1 class="text-black text-6xl self-center" id="charecter">Y</h1>
+            </div>
+            <div class="keyboard">
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd" id="q">q</kbd>
+                    <kbd class="kbd" id="w">w</kbd>
+                    <kbd class="kbd" id="e">e</kbd>
+                    <kbd class="kbd" id="r">r</kbd>
+                    <kbd class="kbd" id="t">t</kbd>
+                    <kbd class="kbd" id="y">y</kbd>
+                    <kbd class="kbd" id="u">u</kbd>
+                    <kbd class="kbd" id="i">i</kbd>
+                    <kbd class="kbd" id="o">o</kbd>
+                    <kbd class="kbd" id="p">p</kbd>
+                  </div>
+                  <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd" id="a">a</kbd>
+                    <kbd class="kbd" id="s">s</kbd>
+                    <kbd class="kbd" id="d">d</kbd>
+                    <kbd class="kbd" id="f">f</kbd>
+                    <kbd class="kbd" id="g">g</kbd>
+                    <kbd class="kbd" id="h">h</kbd>
+                    <kbd class="kbd" id="j">j</kbd>
+                    <kbd class="kbd" id="k">k</kbd>
+                    <kbd class="kbd" id="l">l</kbd>
+                  </div>
+                  <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd" id="z">z</kbd>
+                    <kbd class="kbd" id="x">x</kbd>
+                    <kbd class="kbd" id="c">c</kbd>
+                    <kbd class="kbd" id="v">v</kbd>
+                    <kbd class="kbd" id="b">b</kbd>
+                    <kbd class="kbd" id="n">n</kbd>
+                    <kbd class="kbd" id="m">m</kbd>
+                    <kbd class="kbd" id="/">/</kbd>
+                  </div>
+            </div>
+            <div class="flex justify-between w-full">
+              <button class="btn btn-primary ">Life : <span id="life"></span> </button>
+              <button class="btn btn-primary ">Score: <span id="score"></span></button>
+            </div>
+        </div>
+        <!-- Result -->
+        <div class="size-72 glass m-auto self-center flex flex-col gap-10 p-5 hidden" id="result">
+            <h1 class="text-4xl">You have scored : <span id="game-score" class="text-orange-500"></span></h1>
+            <button class="btn btn-primary" id="play-again">Play Again!</button>
+        </div>
+    </div>
+
+    <script src="./js/game.js"></script>
+</body>
+</html>
